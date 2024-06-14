@@ -1,4 +1,4 @@
-import { Option, OptionTypes } from "../data";
+import { Option } from "../data";
 
 interface Props {
   options: Option[];
