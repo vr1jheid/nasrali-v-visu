@@ -22,7 +22,7 @@ export const Condition = ({ conditions }: Props) => {
               }}
               name="conditions "
               type="radio"
-            />{" "}
+            />
           </label>
         ))}
       </div>

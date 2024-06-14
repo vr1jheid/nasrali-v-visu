@@ -12,7 +12,7 @@ export const Field = (field: IField) => {
         return <Condition conditions={field.conditions!} />;
 
       case FieldTypes.Options:
-        return <Options options={field.options!} />;
+        return <Options options={field.options!} id={field.id} />;
 
       case FieldTypes.NestedFields:
         return (

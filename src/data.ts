@@ -56,7 +56,7 @@ export const response: Response = {
               conditionLabel: "сам заявитель",
               fields: [
                 {
-                  id: "32.1",
+                  id: "32.1.1",
                   title: "Средства:",
                   type: FieldTypes.Options,
                   options: [
@@ -83,6 +83,51 @@ export const response: Response = {
                     {
                       label: "иные (указать)",
                       type: OptionTypes.CheckboxWithInput,
+                    },
+                  ],
+                },
+                {
+                  id: "32.1.2",
+                  title: "Test nested condition",
+                  type: FieldTypes.Condition,
+                  conditions: [
+                    {
+                      conditionLabel: "variant 1",
+                      fields: [
+                        {
+                          id: "32.1.2.1",
+                          type: FieldTypes.Options,
+                          options: [
+                            {
+                              label: "option 1",
+                              type: OptionTypes.Checkbox,
+                            },
+                            {
+                              label: "option 2",
+                              type: OptionTypes.Checkbox,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    {
+                      conditionLabel: "variant 2",
+                      fields: [
+                        {
+                          id: "32.1.2.1",
+                          type: FieldTypes.Options,
+                          options: [
+                            {
+                              label: "radio 1",
+                              type: OptionTypes.Radio,
+                            },
+                            {
+                              label: "radio 2",
+                              type: OptionTypes.Radio,
+                            },
+                          ],
+                        },
+                      ],
                     },
                   ],
                 },
