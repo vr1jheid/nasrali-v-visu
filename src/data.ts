@@ -113,7 +113,7 @@ export const response: Response = {
                           type: OptionTypes.Radio,
                         },
                         {
-                          label: "упомянутые в п.30 или 31",
+                          label: "иные (указать)",
                           type: OptionTypes.RadioWithInput,
                         },
                       ],
