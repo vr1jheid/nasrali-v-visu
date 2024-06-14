@@ -30,7 +30,7 @@ export const Field = (field: IField) => {
 
   return (
     <div>
-      {!id.includes(".") && <h2> Вопрос {id}</h2>}
+      {!id.includes(".") /* true */ && <h2> Вопрос {id}</h2>}
 
       {field.title ? (
         <p style={{ fontWeight: 600, margin: 0 }}>{field.title}</p>

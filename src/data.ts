@@ -65,14 +65,6 @@ export const response: Response = {
                       type: OptionTypes.Checkbox,
                     },
                     {
-                      label: "наличные деньги",
-                      type: OptionTypes.Checkbox,
-                    },
-                    {
-                      label: "наличные деньги",
-                      type: OptionTypes.Checkbox,
-                    },
-                    {
                       label: "дорожные чеки",
                       type: OptionTypes.Checkbox,
                     },
