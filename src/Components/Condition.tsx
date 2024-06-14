@@ -20,18 +20,26 @@ export const Condition = ({ conditions }: Props) => {
               onClick={() => {
                 setSelectedIndex(i);
               }}
-              name="conditions"
+              name="conditions "
               type="radio"
             />{" "}
           </label>
         ))}
       </div>
-      <div>
-        {selectedIndex !== null &&
-          conditions[selectedIndex].fields.map((field, i) => (
+      {selectedIndex !== null && (
+        <div
+          style={{
+            border: "1px solid black",
+            marginTop: 20,
+            borderRadius: 10,
+            padding: "20px 40px",
+          }}
+        >
+          {conditions[selectedIndex].fields.map((field, i) => (
             <Field key={i} {...field} />
           ))}
-      </div>
+        </div>
+      )}
     </>
   );
 };

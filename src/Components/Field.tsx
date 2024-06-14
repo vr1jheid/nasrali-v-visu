@@ -15,7 +15,13 @@ export const Field = (field: IField) => {
         return <Options options={field.options!} />;
 
       case FieldTypes.NestedFields:
-        return field.fields?.map((f, i) => <Field key={i} {...f} />);
+        return (
+          <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+            {field.fields?.map((f, i) => (
+              <Field key={i} {...f} />
+            ))}
+          </div>
+        );
 
       default:
         break;
@@ -26,7 +32,9 @@ export const Field = (field: IField) => {
     <div>
       {!id.includes(".") && <h2> Вопрос {id}</h2>}
 
-      {field.title ? <p style={{ fontWeight: 600 }}>{field.title}</p> : null}
+      {field.title ? (
+        <p style={{ fontWeight: 600, margin: 0 }}>{field.title}</p>
+      ) : null}
       <div>{renderField()}</div>
     </div>
   );
